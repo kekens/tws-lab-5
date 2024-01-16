@@ -3,6 +3,7 @@ package ru.kekens;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
+import ru.kekens.filter.SecurityFilter;
 import ru.kekens.resources.AccountResource;
 
 import java.util.HashSet;
@@ -18,6 +19,7 @@ public class App extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> set = new HashSet<>();
         set.add(AccountResource.class );
+        set.add(SecurityFilter.class );
         return set;
     }
 
