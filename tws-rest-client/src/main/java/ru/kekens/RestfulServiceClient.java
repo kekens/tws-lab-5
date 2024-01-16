@@ -24,7 +24,7 @@ public class RestfulServiceClient {
     public static void main(String[] args) throws ParseException {
 
         // Создаем клиента
-        Client client = ClientBuilder.newClient();
+        Client client = ClientBuilder.newClient().register(new Authenticator("student", "password"));
         WebTarget target = client.target(URI);
 
         // Запросы по поиску счетов
