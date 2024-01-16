@@ -30,7 +30,7 @@ public class SecurityFilter implements ContainerRequestFilter {
 
             if (token.equals("student:password")) {
             } else {
-                requestContext.abortWith(Response.status(401).build());
+                requestContext.abortWith(Response.status(403).build());
             }
         }
     }
